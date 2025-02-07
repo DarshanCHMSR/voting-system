@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>register</title> 
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <div class="header-section">
     <h1>Online Voting System</h1>
     <hr>
-    <form action="#" method="post">
+</div>
+<div class="body-section">
+    <form action="../api/register.php" method="post" enctype="multipart/form-data">
         <h2>Registeration</h2>
-        <input type="text" name="voter_id"  required placeholder="Enter Your Name">
-        <br><br><br>
-        <input type="text" name="voter_ph"  required placeholder="Enter Your Name">
-        <br><br><br>
+        <input type="text" name="name"  required placeholder="Enter Your Name">
+       
+        <input type="text" name="mobile"  required placeholder="Enter Your mobile number">
+        <br><br>
         <input type="password" name="password"  required placeholder="Password">
-        <br><br><br>
+      
         <input type="password" name="cpassword"  required placeholder="Confirm Password">
-        <br><br><br>
-        <input type="text" name="address"  required placeholder="Address">
-        <br><br><br>
-        <input type="file" name="image" required placeholder="Upload Image">
-        <select value="voter">
-            <option value="voter">Voter</option>
-            <option value="candidate">Candidate</option>
+        <br><br>
+        <input type="text" name="address"  required placeholder="Address" style="width: 30%;text-align:center;">
+       
+        <div class="file">
+        <label for="image">Upload Image:</label>
+        <input type="file" name="photo" required placeholder="Upload Image">
+    </div>
+    <div class="file">
+        <label for="image" >Select Role:</label>
+        <select name="role">
+            <option value="1">Voter</option>
+            <option value="2">Candidate</option>
         </select>
-        <p>Already a user?</p>
-        <a href="#">Login</a>
+    </div>
+    <input type="submit" value="Register" id="submit">
+        <p>Already a user?     <a href="../index.php">Login</a></p>
+    
     </form>
+</div>
 </body>
 </html>
